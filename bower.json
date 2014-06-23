@@ -1,0 +1,27 @@
+{
+  "name": "typescript-template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/opengl-8080/typescript-template",
+  "authors": [
+    "opengl8080 <tomcat.port.8080+github@gmail.com>"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11",
+    "angular": "~1.2.18",
+    "underscore": "~1.6.0",
+    "bootstrap": "~3.1.1",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  }
+}
