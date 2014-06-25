@@ -42,6 +42,16 @@ describe('Graph Class', () => {
             expect(node1.getNextNodes()[0]).toBe(node3.getNextNodes()[0]);
         });
         
+        it('同じノードを複数回登録しても、次のノードの追加は１度だけ実行される', () => {
+            // exercise
+            graph.addNodes(node('node1'), node('node2'));
+            graph.addNodes(node('node1'), node('node2'));
+            
+            // verify
+            node1 = graph.getNode('node1');
+            expect(node1.getNextNodes().length).toBe(1);
+        });
+        
         function node(name : string) : ttsort.Node {
             return new ttsort.Node(name);
         }

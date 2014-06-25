@@ -70,16 +70,6 @@ describe('Node Class', () => {
             expect(nodes[0]).toBe(node2);
             expect(nodes[1]).toBe(node3);
         });
-//        
-//        xit('removeNextNodes で、出力ノードとの関連が除去される', () => {
-//            // exercise
-//            node1.removeNextNodes();
-//            
-//            // verify
-//            expect(_.isEmpty(node1.getNextNodes())).toBe(true);
-//            expect(_.isEmpty(node2.getPreviousNodes())).toBe(true);
-//            expect(_.isEmpty(node3.getPreviousNodes())).toBe(true);
-//        });
         
         it('removePreviousNode で指定したノードとの関連が除去される', () => {
             // exercise
@@ -89,7 +79,15 @@ describe('Node Class', () => {
             expect(node2.getPreviousNodes().length).toBe(0);
             expect(node1.getNextNodes().length).toBe(1);
             expect(node1.getNextNodes()[0]).toBe(node3);
-        })
+        });
+        
+        it('既に同じノードが追加されている場合、ノードは追加されない', () => {
+            // exercise
+            node1.addNextNode(node2);
+            
+            // verify
+            expect(node1.getNextNodes().length).toBe(2);
+        });
     });
 });
 
