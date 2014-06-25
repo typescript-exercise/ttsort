@@ -81,7 +81,7 @@ describe('Node Class', () => {
             expect(node1.getNextNodes()[0]).toBe(node3);
         });
         
-        it('既に同じノードが追加されている場合、ノードは追加されない', () => {
+        it('既に追加済みのノードをもう一度追加しても、出力ノードは変化しない', () => {
             // exercise
             node1.addNextNode(node2);
             
